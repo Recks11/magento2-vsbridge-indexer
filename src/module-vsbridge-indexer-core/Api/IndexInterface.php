@@ -1,0 +1,45 @@
+<?php
+/**
+ * @package   Divante\VsbridgeIndexerCore
+ * @author    Agata Firlejczyk <afirlejczyk@divante.pl>
+ * @copyright 2019 Divante Sp. z o.o.
+ * @license   See LICENSE_DIVANTE.txt for license details.
+ */
+
+namespace Divante\VsbridgeIndexerCore\Api;
+
+/**
+ * Interface IndexInterface
+ */
+interface IndexInterface
+{
+    /**
+     * @return string
+     */
+    public function getName();
+
+    /**
+     * @return string
+     */
+    public function getIdentifier();
+
+    /**
+     * @return boolean
+     */
+    public function isNew();
+
+    /**
+     * @return string
+     */
+    public function getType();
+
+    /**
+     * @return \Divante\VsbridgeIndexerCore\Api\DataProviderInterface[]
+     */
+    public function getDataProviders();
+
+    /**
+     * @return \Divante\VsbridgeIndexerCore\Api\MappingInterface|null
+     */
+    public function getMapping();
+}
